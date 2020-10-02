@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './App.css';
 const api = {
   key: "773eb64fa4a5cec966b88f5a806ff429",
-  base:  "http://api.openweathermap.org/data/2.5/"
+  base:  "https://api.openweathermap.org/data/2.5/"
 };
 
 function App() {
@@ -29,63 +29,6 @@ function App() {
         let year = d.getFullYear();
         return `${day} ${date} ${month} ${year}`
     };
-    // if(typeof weather.main != "undefined" && weather.main.temp > 16) {
-    //     return (
-    //         <div className="app-warm">
-    //            <main>
-    //             <div className="search-box">
-    //                 <input
-    //                     type="text"
-    //                     className="search-bar"
-    //                     placeholder="Search..."
-    //                     onChange={e => setQuery(e.target.value)}
-    //                     value={query}
-    //                     onKeyPress={search}/>
-    //             </div>
-    //             {(typeof weather.main != 'undefined') ? (
-    //                 <div>
-    //                     <div className="location-box">
-    //                         <div className="location">{weather.name}, {weather.sys.country}</div>
-    //                         <div className="date">{dateBuilder(new Date())}</div>
-    //                     </div>
-    //                     <div className="weather-box">
-    //                         <div className="temp">{Number(Math.round(weather.main.temp - 273.15))}°C</div>
-    //                         <div className="weather">{weather.weather[0].main}</div>
-    //                     </div>
-    //                 </div>
-    //             ) : ('')}
-    //         </main>
-    //         </div>
-    //     )}
-    //   else {
-    //     return (
-    //         <div className="app">
-    //             <main>
-    //                 <div className="search-box">
-    //                     <input
-    //                         type="text"
-    //                         className="search-bar"
-    //                         placeholder="Search..."
-    //                         onChange={e => setQuery(e.target.value)}
-    //                         value={query}
-    //                         onKeyPress={search}/>
-    //                 </div>
-    //                 {(typeof weather.main != 'undefined') ? (
-    //                     <div>
-    //                         <div className="location-box">
-    //                             <div className="location">{weather.name}, {weather.sys.country}</div>
-    //                             <div className="date">{dateBuilder(new Date())}</div>
-    //                         </div>
-    //                         <div className="weather-box">
-    //                             <div className="temp">{Number(Math.round(weather.main.temp - 273.15))}°C</div>
-    //                             <div className="weather">{weather.weather[0].main}</div>
-    //                         </div>
-    //                     </div>
-    //                 ) : ('')}
-    //             </main>
-    //         </div>
-    //     );
-    // }
     const isHot = () => {
         console.log((weather.main.temp - 273.15) > 16);
         return (weather.main.temp - 273.15) > 16 ? 'app-warm' : 'app';
