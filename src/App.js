@@ -30,12 +30,10 @@ function App() {
         return `${day} ${date} ${month} ${year}`
     };
     const isHot = () => {
-        console.log((weather.main.temp - 273.15) > 16);
         return (weather.main.temp - 273.15) > 16 ? 'app-warm' : 'app';
     };
   return (
     <div className={(typeof weather.main != "undefined") ? isHot() : 'app'}>
-        {console.log(`typeof weather.main != "undefined"`, typeof weather.main != "undefined")}
          <main>
                <div className="search-box">
                   <input
@@ -57,7 +55,7 @@ function App() {
                  <div className="weather">{weather.weather[0].main}</div>
                  </div>
               </div>
-             ) : ('Welcome to my weather app')}
+             ) : (<h1 className="slogan">Welcome to my weather app :)</h1>)}
          </main>
     </div>
   );
