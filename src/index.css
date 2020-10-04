@@ -44,8 +44,18 @@ main {
 }
 .search-box  .search-bar:focus {
   background-color: rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid grey;
 }
-
+.search-box .dropdown {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 0;
+  height: auto;
+  min-height: 15px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+}
 .location-box .location {
   color: #FFF;
   font-size: 32px;
@@ -89,4 +99,15 @@ main {
   color: #FFFFFF;
   font-weight: 700;
   text-shadow: 4px 4px rgba(50, 50, 70, 0.5);
+}
+.cities-list {
+  list-style-type: none;
+  padding: 3px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.cities-list:hover  {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
 }
